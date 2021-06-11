@@ -1,0 +1,29 @@
+{% extends "parent.html" %}
+
+{% block head%}
+    <title>Login</title>
+{% endblock %}
+
+{% block body%}
+    <img src="https://i.pinimg.com/originals/5f/2b/9b/5f2b9b82ab2b0dd21133c061d3587860.jpg" alt="login_pic" class="pic">
+    <div class = "absolute">
+    <header>
+        <h1 class="head">Welcome to <span>PlanMyLife</span></h1>
+    </header>
+    <div>
+        <h2>Everything You Need to Know</h2>
+        <p>
+            This workspace provides you the zone and freewill to strategize your next moves.<br>
+            Be creative. Feel Free. And PlanYourLife
+        </p>
+    </div>
+    <form action="/" method="post" class = "game">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="username" required>
+        <label for="password" class="label">Password</label>
+        <input type="password" name="password" id="password" placeholder="*********" required>
+        <input type="submit" value="Login">
+    </form>
+        <a href="/setup">New? Click here</a>
+    </div>
+{% endblock %}

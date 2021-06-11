@@ -1,0 +1,47 @@
+{% extends "parent.html" %}
+
+{% block head%}
+<title>Setup</title>
+{% endblock %}
+
+{% block body%}
+<img src="https://www.10wallpaper.com/wallpaper/1366x768/1712/Baltic_sea_dawn_beach_Travel_4K_Ultra_HD_1366x768.jpg" alt="setup_pic" class="setup_pic">
+<h1 class="welcome">Welcome to <span>PlanMyLife</span></h1>
+<div class="setup">
+    <header>
+        <a href="/view">Go back</a>
+    </header>
+    <section>
+        <h3>Personal Info</h3>
+        <form action="/edit_info" method="post">
+        {% for info in info%}
+            <input type="text" name="f_name" value="{{info.f_name}}" required>
+            <input type="text" name="l_name" value="{{info.l_name}}" required>
+            <br> <br>
+            <label for="dob">Birth Date</label>
+            <input type="date" name="dob" id="dob" value="{{info.date}}" required>
+            <select name="gender">
+                <option selected disabled>gender</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Rather not say</option>
+                <option value="4">Custom</option>
+            </select>
+            <br> <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" value="{{info.email}}" required>
+            <br> <br>
+            <h3>Finalize Account</h3>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" value="{{info.username}}" required> <br> <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" value="{{info.password}}" required>
+            <div class="last">
+                <input type="submit" value="Done">
+            </div>
+        {% endfor %}
+        </form>
+        <br>
+    </section>
+</div>
+{% endblock %}

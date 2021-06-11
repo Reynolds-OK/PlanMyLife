@@ -1,0 +1,69 @@
+{% extends "parent.html" %}
+
+{% block head%}
+    <title>PlanMyLife</title>
+{% endblock %}
+
+{% block body%}
+    <img src="https://wallpaperaccess.com/full/2157.png" alt="viewpage" class="viewpage">
+    <header class="header">
+        <h1>Welcome to <span>PlanMyLife</span></h1>
+        <a href="/edit_info">Update Info</a>
+    </header>
+    <div class="view">
+        <div class="sticky">
+            <h3>Sticky Notes</h3>
+            {% if stickers|length < 1 %} <h4>There are no Sticky Notes</h4>
+                {%else%}
+                
+                <table class="sticky_table">
+                    {%for sticker in stickers%}
+                    <td>
+                    <span>{{sticker.date}}</span>
+                    <a href="/stickers/edit/{{sticker.id}}"><input type="submit" value="Edit"></a>
+                    <a href="/stickers/delete/{{sticker.id}}" class="close">X</a> <br>
+                    <textarea name="sticker" cols="15" rows="5">{{sticker.text}}</textarea>
+                    </td>
+                    {% endfor %}
+                </table>
+                
+                {% endif %}
+                <form action="/sticker" method="post">
+                    <input type="text" name="sticker" placeholder="New Note">
+                    <input type="submit" value="Add">
+                </form>
+        </div>
+    <main>
+    <h3>Targets</h3>
+    {% if targets|length < 1 %} 
+    <h4>There are no Objectives</h4>
+    {%else%}
+        <table class="target_table">
+            <tr>
+                <th>Date Created</th>
+                <th>Objective</th>
+                <th>Deadline</th>
+                <th>Tools</th>
+            </tr>
+            {%for target in targets%}
+            <tr>
+                <td>{{target.date}}</td>
+                <td>{{target.objective}}</td>
+                <td>{{target.deadline}}</td>
+                <td>
+                    <a href="/targets/edit/{{target.id}}">Edit</a>
+                    <a href="/targets/delete/{{target.id}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {%endif%}
+    <form action="/target" method="post">
+        <input type="text" name="objective" placeholder="Objective...">
+        <input type="text" name="deadline" placeholder="Date or time">
+        <input type="submit" value="Add">
+    </form>
+    </main>
+    <br> <br>
+    </div>
+{% endblock %}

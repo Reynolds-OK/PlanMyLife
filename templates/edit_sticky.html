@@ -1,0 +1,18 @@
+{% extends "parent.html" %}
+
+{% block head%}
+    <title>PlanMyLife</title>
+{% endblock %}
+
+{% block body%}
+    <img src="https://images7.alphacoders.com/550/thumb-1920-550708.jpg" alt="Edit" class="img">
+    <div class="edit">
+    <header>
+        <h2>PlanMyLife</h2>
+    </header>
+    <form action="/stickers/edit/{{sticker.id}}" method="post">
+        <input type="text" name="sticky" value="{{sticker.text}}">
+        <input type="submit" value="Edit">
+    </form>
+    </div>
+{% endblock %}

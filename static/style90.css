@@ -1,0 +1,372 @@
+body{
+    font-family: sans-serif;
+    color: rgb(167, 176, 185);
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* login */
+.pic{
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+}
+
+.absolute{
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    color: white;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+
+h1{
+    font-weight: bold;
+    font-family: helvetica;
+    color: slategray;
+}
+
+h1 span{
+    font-size: 1.5em;
+    color: white;
+}
+
+.game{
+    border: 4px solid slategray;
+    margin: 15px 5px;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+.game input{ 
+    border-radius: 5px;
+    padding: 7px 5px;
+    border: 2px solid rgb(252, 79, 79);
+}
+
+.game .label{
+    margin-left: 5px;
+}
+
+.game label{
+    font-family: arial;
+    font-weight: bold;
+}
+
+.absolute a{
+    font-weight: bold;
+}
+
+footer{
+    position: absolute;
+    top: 100%;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(233, 7, 7, 0.7);
+    padding: 15px 0;
+    margin: 0 0;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+/* pseudo elements */
+.absolute a:hover{
+    color:white;
+    border: 2px solid rgb(252, 79, 79);
+    border-radius: 5px;
+    padding: 4px 5px;
+}
+
+.game input:focus{
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.game:hover{
+    border: 4px solid red;
+    border-radius: 15px;
+}
+
+
+/* setup */
+.setup_pic{
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    height: 710px;
+}
+
+.setup{
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    color: black;
+    font-size: 17px;
+    line-height: 1.5em;
+    background-color: rgb(255, 255, 255, 0.9);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: helvetica;
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+.welcome{
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    font-weight: bold;
+    font-family: helvetica;
+    color: slategray;
+}
+
+.welcome span{
+    font-size: 1.5em;
+    color: white;
+}
+
+.setup section{
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px 10px;
+    padding: 0px 10px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.setup label{
+    font-family: arial;
+    font-weight: bold;
+}
+
+.setup form input{
+    border-radius: 5px;
+    padding: 5px 5px;
+    border: 2px solid black;
+}
+
+.setup h3 form{
+    text-align: left;
+}
+
+.setup h1 span{
+    color: black;
+}
+
+.setup section h3{
+    color: slategray;
+    font-weight: bold;
+}
+
+.last{
+    text-align: right;
+}
+
+/* pseudo elements */
+
+.setup a:hover{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.setup form input:valid{
+    border: 2px solid #71d300;
+}
+
+.setup form input:focus{
+    outline: none;
+}
+
+/* Edit */
+
+.img{
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.edit{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: black;
+    background-color: rgb(255, 255, 255, 0.7);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: helvetica;
+}
+
+.edit h2{
+    font-size: 3em;
+}
+
+.edit form{
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px 10px;
+    border: 2px solid red;
+}
+
+.edit form input{
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    border: 2px solid black;
+}
+
+.edit form input:valid{
+    border: 2px solid #71d300;
+}
+
+.edit form input:focus{
+    outline: none;
+}
+
+
+/* viewpage */
+.viewpage{
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.view{
+    display: inline-block;
+    font-family: helvetica;
+    color: black;
+    font-weight: bold;
+}
+
+.view main{ 
+    position: absolute;
+    top: 13%; 
+    left: 45%;  
+    background-color: rgb(255, 255, 255, 0.9);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: helvetica;
+    text-align: center;
+    color: black;
+    max-width: 50%;
+    height: 85%;
+    width: 90%;
+    display: inline-block; 
+    margin: 5px 2%;
+}
+
+.view .sticky{
+    position: absolute;
+    top: 13%;
+    left: 0%;  
+    background-color: rgb(255, 255, 255, 0.9);
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    max-width: 40%;
+    height: 85%;
+    width: 90%;
+    display: inline-block;
+    margin: 5px 3%; 
+}
+
+.header a{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: white;
+}
+
+.view form input{
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    border: 2px solid black;
+    bottom: 30%;
+}
+
+.view form{
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px 10px;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.header h1{
+    position: absolute;
+    top: 0.5%;
+    left: 30%;
+    color: white;
+}
+
+.header h1 span{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.view .target_table table, .target_table td, th {
+    border: 2px solid black;
+}
+
+.view table{
+    width: 100%;
+}
+
+.view .target_table td {
+    text-align: center;
+    padding: 5px;
+    height: 30px;
+}
+
+.view th {
+    height: 30px;
+    color: rgb(245, 53, 53);
+}
+
+/* .sticky_table{
+    border-collapse: collapse;
+} */
+
+.sticky_table td{
+    display: inline-block;
+    white-space: nowrap;
+    margin: 3px 5px;
+}
+
+textarea{
+    background-color: yellow;
+}
+
+/* pseudo elements */
+.view form input:focus{
+    outline: none;
+}
+
+.header a:hover{
+    color: white;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+.sticky .close:hover{
+    color: red;
+    border: 1px solid red;
+}
